@@ -34,7 +34,7 @@ export const Chat = ({ room }) => {
         });
 
         return() => unsuscribe();
-    }, []);
+    }, [room, messagesRef]);
 
     const handleSubmit = async (e) => {
 
