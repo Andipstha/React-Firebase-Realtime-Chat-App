@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-Firebase-Realtime-Chat-App%20/static/css/main.5a18a71b.css",
-    "main.js": "/React-Firebase-Realtime-Chat-App%20/static/js/main.27a37d54.js",
-    "static/js/787.a3161807.chunk.js": "/React-Firebase-Realtime-Chat-App%20/static/js/787.a3161807.chunk.js",
-    "index.html": "/React-Firebase-Realtime-Chat-App%20/index.html",
-    "main.5a18a71b.css.map": "/React-Firebase-Realtime-Chat-App%20/static/css/main.5a18a71b.css.map",
-    "main.27a37d54.js.map": "/React-Firebase-Realtime-Chat-App%20/static/js/main.27a37d54.js.map",
-    "787.a3161807.chunk.js.map": "/React-Firebase-Realtime-Chat-App%20/static/js/787.a3161807.chunk.js.map"
+    "main.css": "/React-Firebase-Realtime-Chat-App/static/css/main.5a18a71b.css",
+    "main.js": "/React-Firebase-Realtime-Chat-App/static/js/main.7c83dc0f.js",
+    "static/js/787.a3161807.chunk.js": "/React-Firebase-Realtime-Chat-App/static/js/787.a3161807.chunk.js",
+    "index.html": "/React-Firebase-Realtime-Chat-App/index.html",
+    "main.5a18a71b.css.map": "/React-Firebase-Realtime-Chat-App/static/css/main.5a18a71b.css.map",
+    "main.7c83dc0f.js.map": "/React-Firebase-Realtime-Chat-App/static/js/main.7c83dc0f.js.map",
+    "787.a3161807.chunk.js.map": "/React-Firebase-Realtime-Chat-App/static/js/787.a3161807.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a18a71b.css",
-    "static/js/main.27a37d54.js"
+    "static/js/main.7c83dc0f.js"
   ]
 }
