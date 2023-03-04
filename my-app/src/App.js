@@ -1,57 +1,60 @@
-import React, { useState, useRef } from "react";
-import { Auth } from "./components/Auth";
-import Cookies from "universal-cookie";
+import React, { useState } from "react";
 import { Chat } from "./components/Chat";
-import { signOut } from "firebase/auth";
-import { auth } from "./firebase-config";
-
+import { Auth } from "./components/Auth";
+import { AppWrapper } from "./components/AppWrapper";
+import Cookies from "universal-cookie";
+// import { signOut } from "firebase/auth";
+// import { auth } from "./firebase-config";
 import './App.css';
-import "../src/styles/Auth.css";
 
 const cookies = new Cookies();
 
-function App() {
+function ChatApp() {
   const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
-  const [room, setRoom] = useState(null);
+  const [isInChat, setIsInChat] = useState(null);
+  const [room, setRoom] = useState("");
 
-  const roomInputRef = useRef(null);
+  // const [room, setRoom] = useState(null);
+  // const roomInputRef = useRef(null);
 
-  const signUserOut = async () => {
-    await signOut(auth);
-    cookies.remove("auth-token");
-    setIsAuth(false);
-    setRoom(null);
-  };
+  // const signUserOut = async () => {
+  //   await signOut(auth);
+  //   cookies.remove("auth-token");
+  //   setIsAuth(false);
+  //   setRoom(null);
+  // };
 
   if(!isAuth){
     return (
-    <div>
-      <Auth setIsAuth={setIsAuth}/>
-    </div>
+      <AppWrapper
+      isAuth={isAuth}
+      setIsAuth={setIsAuth}
+      setIsInChat={setIsInChat}
+    >
+      <Auth setIsAuth={setIsAuth} />
+    </AppWrapper>
     );
   }
 
   return( 
-    <>
-      {room ? (
-        <Chat room={room} /> 
-        ) : (
-          <div className="room"> 
-            <label>Enter Room Name: </label>
-            <input ref={roomInputRef}/>
-            <button onClick={() => setRoom(roomInputRef.current.value)}>
-              Enter Chat
-            </button>
-          </div>
-        )}
-
-      <div className="sign-out">
-        <button onClick={signUserOut}>Sign Out</button>
-    
-      </div>
-    </>
+    <AppWrapper isAuth={isAuth} setIsAuth={setIsAuth} setIsInChat={setIsInChat}>
+      {!isInChat ? (
+        <div className="room">
+          <label> Type room name: </label>
+          <input onChange={(e) => setRoom(e.target.value)} />
+          <button
+            onClick={() => {
+              setIsInChat(true);
+            }}
+          >
+            Enter Chat
+          </button>
+        </div>
+      ) : (
+        <Chat room={room} />
+      )}
+    </AppWrapper>
   );
-  
 }
 
-export default App;
+export default ChatApp;

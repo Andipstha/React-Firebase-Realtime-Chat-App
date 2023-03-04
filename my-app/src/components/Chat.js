@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
-import { addDoc, collection, serverTimestamp, onSnapshot, query, where, orderBy } from "firebase/firestore";
-// import { async } from "@firebase/util";
 import {auth, db} from  "../firebase-config"
+import { 
+    collection, 
+    addDoc, 
+    where, 
+    serverTimestamp, 
+    onSnapshot, 
+    query, 
+    orderBy 
+} from "firebase/firestore";
 import "../styles/Chat.css";
 
 
-export const Chat = (props) => {
+export const Chat = ({ room }) => {
 
-    const { room } = props;
-    const [newMessage, setNewMessage] = useState("");
+    // const { room } = props;
     const [messages, setMessages] = useState([]);
-
+    const [newMessage, setNewMessage] = useState("");
     const messagesRef = collection(db, "messages");
 
     useEffect(() => {
