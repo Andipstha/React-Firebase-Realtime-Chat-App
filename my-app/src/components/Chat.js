@@ -48,7 +48,12 @@ export const Chat = (props) => {
                 <h1>Welcomt to: {room.toUpperCase()}</h1>
             </div>
             <div className="messages"> 
-                {messages.map((message) => <h1> {message.text} </h1>)} 
+                {messages.map((message) => (
+                <div className="message" key={message.id}>
+                    <span className="user">{message.user}</span>
+                    {message.text}
+                </div>
+                ))} 
             </div>
             <form onSubmit={handleSubmit} className="new-message-from">
                 <input 
