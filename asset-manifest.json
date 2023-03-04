@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Firebase-Realtime-Chat-App%20/static/css/main.a29e0f27.css",
+    "main.js": "/React-Firebase-Realtime-Chat-App%20/static/js/main.2e4982a2.js",
+    "static/js/787.28cb0dcd.chunk.js": "/React-Firebase-Realtime-Chat-App%20/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/React-Firebase-Realtime-Chat-App%20/index.html",
+    "main.a29e0f27.css.map": "/React-Firebase-Realtime-Chat-App%20/static/css/main.a29e0f27.css.map",
+    "main.2e4982a2.js.map": "/React-Firebase-Realtime-Chat-App%20/static/js/main.2e4982a2.js.map",
+    "787.28cb0dcd.chunk.js.map": "/React-Firebase-Realtime-Chat-App%20/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a29e0f27.css",
+    "static/js/main.2e4982a2.js"
+  ]
+}
