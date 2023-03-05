@@ -41,13 +41,13 @@ function ChatApp() {
       {!isInChat ? (
         <div className="room">
           <label> Type room name: </label>
-          <input onChange={(e) => setRoom(e.target.value)} />
-          <button
+          <input className="search-room" onChange={(e) => setRoom(e.target.value)} />
+          <button className="button"
             onClick={() => {
               setIsInChat(true);
             }}
           >
-            Enter Chat
+            Enter Chat  ❯
           </button>
         </div>
       ) : (

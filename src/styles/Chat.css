@@ -54,6 +54,7 @@
   color: #333;
   padding: 10px;
   border-radius: 5px 0 0 5px;
+  width: 300px;
 }
 
 .send-button {
@@ -63,4 +64,15 @@
   color: #fff;
   font-size: 16px;
   font-weight: bold;
+}
+
+.signout-button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: #3b5998;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
 }

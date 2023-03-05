@@ -1,6 +1,6 @@
 import { auth } from "../firebase-config.js";
 import { signOut } from "firebase/auth";
-// import '../App.css';
+import '../App.css';
 
 import Cookies from "universal-cookie";
 
@@ -22,8 +22,8 @@ export const AppWrapper = ({ children, isAuth, setIsAuth, setIsInChat }) => {
 
       <div className="app-container">{children}</div>
       {isAuth && (
-        <div className="sign-out">
-          <button onClick={signUserOut}> Sign Out</button>
+        <div >
+          <button className="sign-out" onClick={signUserOut}> Sign Out</button>
         </div>
       )}
     </div>
